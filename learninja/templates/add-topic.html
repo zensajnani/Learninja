@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Add Topic</h1>
+<form method="POST">
+{{ form.hidden_tag() }}
+<div>
+{{ form.topic_add(class='form-control', placeholder='Topic') }}
+{{ form.subject_add(class='form-control', placeholder='Subject') }}
+{{ form.course_add(class='form-control', placeholder='Course') }}
+{{ form.search(class='btn btn-primary') }}
+</div>
+    </form>
+{% endblock %}

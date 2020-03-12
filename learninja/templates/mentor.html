@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mentor Profile</h1>
+<p>Search for topics you can Teach</p>
+    <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.topic_search(placeholder='Search for topic') }}
+    {{ form.search(class='btn btn-primary') }}
+    </form>
+    <p>{{ course_list_unique }}</p>
+    <p>{{ subject_list }}</p>
+    <p>Course: {{ course }}</p>
+    {% for topic in mentor_topic %}
+    <p>{{ topic }}</p>
+    {% endfor %}
+
+{% endblock %}

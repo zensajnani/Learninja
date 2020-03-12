@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+{{ form.hidden_tag() }}
+<div>
+{{ form.topic_search(class='form-control', placeholder='Search for Course, Subject or Topic') }}
+{{ form.search(class='btn btn-primary') }}
+    <p>{{ form.topic_search.data }}</p>
+    <p>{{ subject_topic }}</p>
+    <p>{{ course_topic }}</p>
+</div>
+    </form>
+{% endblock %}

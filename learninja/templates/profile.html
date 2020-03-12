@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Logged In</h1>
+<p>Username: {{ current_user.username }}</p>
+<p>Email: {{ current_user.email }}</p>
+<form method="POST">
+{{ form.hidden_tag() }}
+{% if current_user.user_type == 0 %}
+    <p>Account Type: Admin</p>
+{% elif current_user.user_type == 1 %}
+    <p>Mentor Mode: Off</p>
+    <p>{{ form.submit(class="btn btn-primary", value="Activate Mentor Mode") }}</p>
+    {% elif current_user.user_type == 2 %}
+    <p>Mentor Mode: On</p>
+    <p>{{ form.submit(class="btn btn-primary", value="Deactivate Mentor Mode") }}</p>
+    {% elif current_user.user_type == 3 %}
+    <p>Account Type: Student and Mentor</p>
+{% else %}
+    <p>There is some error: {{ current_user.user_type }}</p>
+{% endif %}
+<p><button type="button" class="btn btn-primary">Edit Profile</button></p>
+{{ form.boolean_test(class="custom-control-input") }}
+    </form>
+{% endblock %}

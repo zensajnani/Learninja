@@ -1,0 +1,57 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+#primary-menu ul li > a {
+  text-transform: none;
+  margin: 10px;
+  line-height: 0px;
+  padding: 15px 5px;
+  font-size: 17px;
+}
+
+#header, #header-wrap, #logo img {
+  height:50px;
+  background-color: #0a0a0a;
+}
+
+i {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.toggle{
+  color: #FFF;
+  width: 100%
+  padding: 10px 20px;
+  background: #82C91E;
+  text-align: right;
+  font-size: 20px;
+  box-sizing: border-box;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .toggle{
+    display: block;
+
+  }
+}
+
+
+header * {
+  color: #0a0a0a;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #FFFFFF;
+  display: inline;
+}
+
+/*li {*/
+/*    padding: 10px 20px;*/
+/*}*/
