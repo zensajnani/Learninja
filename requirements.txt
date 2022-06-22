@@ -22,7 +22,7 @@ Mako==1.1.0
 MarkupSafe==1.1.1
 #mkl-fft==1.0.15
 #mkl-service==2.3.0
-numpy==1.18.0
+numpy==1.22.0
 oauth2==1.9.0.post1
 oauthlib==3.1.0
 pandas==0.25.3
